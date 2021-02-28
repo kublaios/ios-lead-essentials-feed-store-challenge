@@ -1,9 +1,10 @@
 import Foundation
 
-public class InMemoryFeedStore: FeedStore {
-
+public class InMemoryFeedStore {
 	public static let shared = InMemoryFeedStore.init()
+}
 
+extension InMemoryFeedStore: FeedStore {
 	public func deleteCachedFeed(completion: @escaping DeletionCompletion) {
 
 	}
@@ -15,5 +16,4 @@ public class InMemoryFeedStore: FeedStore {
 	public func retrieve(completion: @escaping RetrievalCompletion) {
 		completion(.empty)
 	}
-
 }
