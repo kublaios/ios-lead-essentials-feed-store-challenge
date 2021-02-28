@@ -20,13 +20,13 @@ class FeedStoreChallengeTests: XCTestCase, FeedStoreSpecs {
 	//  ***********************
 	
 	func test_retrieve_deliversEmptyOnEmptyCache() throws {
-		let sut = try makeSUT()
+		let sut = makeSUT()
 
 		assertThatRetrieveDeliversEmptyOnEmptyCache(on: sut)
 	}
 	
 	func test_retrieve_hasNoSideEffectsOnEmptyCache() throws {
-		let sut = try makeSUT()
+		let sut = makeSUT()
 
 		assertThatRetrieveHasNoSideEffectsOnEmptyCache(on: sut)
 	}
@@ -93,7 +93,7 @@ class FeedStoreChallengeTests: XCTestCase, FeedStoreSpecs {
 	
 	// - MARK: Helpers
 	
-	private func makeSUT() throws -> FeedStore {
+	private func makeSUT() -> FeedStore {
 		return InMemoryFeedStore.shared
 	}
 	
