@@ -7,18 +7,6 @@ import FeedStoreChallenge
 
 class FeedStoreChallengeTests: XCTestCase, FeedStoreSpecs {
 
-	override func setUp() {
-		super.setUp()
-
-		self.deleteCache(from: self.makeSUT())
-	}
-
-	override func tearDown() {
-		super.tearDown()
-
-		self.deleteCache(from: self.makeSUT())
-	}
-	
 	//  ***********************
 	//
 	//  Follow the TDD process:
