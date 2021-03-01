@@ -6,8 +6,9 @@ public final class InMemoryFeedStore {
 		let timestamp: Date
 	}
 
-	public static let shared = InMemoryFeedStore.init()
 	private var cache: Cache?
+
+	public init() { }
 }
 
 extension InMemoryFeedStore: FeedStore {
