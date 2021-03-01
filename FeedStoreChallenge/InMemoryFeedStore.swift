@@ -1,6 +1,6 @@
 import Foundation
 
-public class InMemoryFeedStore {
+public final class InMemoryFeedStore {
 	private struct Cache {
 		let feed: [LocalFeedImage]
 		let timestamp: Date
