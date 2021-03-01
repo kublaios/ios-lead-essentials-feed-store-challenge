@@ -93,9 +93,9 @@ class FeedStoreChallengeTests: XCTestCase, FeedStoreSpecs {
 	
 	// - MARK: Helpers
 	
-	private func makeSUT() -> FeedStore {
+	private func makeSUT(file: StaticString = #filePath, line: UInt = #line) -> FeedStore {
 		let sut = InMemoryFeedStore.init()
-		self.trackForMemoryLeaks(sut)
+		self.trackForMemoryLeaks(sut, file: file, line: line)
 		return sut
 	}
 
